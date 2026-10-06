@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        #hello {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .myClass {
+            text-align: right;
+        }
+
+        #Neikos496 {
+            display: inline-block;
+            background-color: purple;
+            color: yellow;
+        }
+
+        #Philia093 {
+            color: deeppink;
+            text-align: center;
+            font-size: larger;
+            font-family: 'Comic Sans MS', serif;
+        }
+
+        #astralExpress {
+            background-color: darkgray;
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>A Hello World HTML</h1>
+    <div id="hello"> hello world</div>
+    <div class="myClass">
+        <button type="button" onclick="myButtonFunction()">Click me</button>
+        <button id="Neikos496" type="button" onclick="myButtonFunction2()">Don't click me</button>
+        <div id="myNumber">0</div>
+    </div>
+    <button id="astralExpress" type="button" onclick="myButtonFunction3()">Astral Express</button>
+    <script>
+        let my_number = 0;
+        let Phainon = false;
+        let Cyrene = false;
+        let speech;
+
+        function myButtonFunction(){
+            if(Phainon && my_number == 33550336){
+                my_number = "<div id='Neikos496'> Let the fires of rage burn this body to ashes and transform into the blazing sun of tomorrow.</div>";
+                Phainon = false;
+            }else if(my_number >= 33550337){
+                my_number = "<div id='Philia093'>And together, we shall write a verse unlike any before ♪</div>";
+                Cyrene = true;
+            }else if(!Number.isInteger(my_number)){
+                my_number = 0;
+            }else{
+                my_number+=1;
+            }if (Cyrene == true){
+                document.getElementById("myNumber").innerHTML = "<div id='Philia093'>"+ my_number +"</div>";
+                }else{
+                    document.getElementById("myNumber").innerHTML = my_number;
+                }
+        }
+
+        function myButtonFunction2(){
+            if (my_number != 0){
+                my_number = 0;
+                console.log("I told you do not click me!");
+            }else{
+                my_number = 33550336;
+                Phainon = true;
+            }
+            document.getElementById("myNumber").innerHTML = my_number;
+        }
+
+        function myButtonFunction3(){
+            my_number = 33550337;
+            document.getElementById("myNumber").innerHTML = my_number;
+        }
+    </script>
+</body>
+</html>
